@@ -4,23 +4,111 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.7.0/p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.7.0/addons/p5.sound.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic&display=swap" rel="stylesheet">
+    <link rel="icon" href="images/icon.svg" type="image/svg+xml">
     <meta property="og:image" content="images/key-visual.png">
     <meta property="og:description"
         content="写真やメディアアートなどを展示する、グループ展を開催いたします 私たちが知覚したもの・こと をテーマにした作品を展示します">
-    <title>Document</title>
+    <title>Re：構築</title>
 </head>
 <body>
-    <div class="firstview"></div>
+    <section class="header">
+        <div class="header-info">
+            <a class="site-name" href="#">Re：構築</a>
+        </div>
+        <div class="nav">
+            <ul>
+                <li><a href="#about">about</a></li>
+                <li><a href="#artist">artist</a></li>
+                <li><a href="#info">info</a></li>
+            </ul>
+        </div>
+    </section>
 
-    <!-- 私たちの世界は、私たちの触れたもの・見たもの・経験で作られていて
-    常にその輪郭を変化させ続けている
-    
-    私たちの世界も、あなたの世界も、そのどこかで交わっている
-    そう気がついたら、そこにまた新しい世界が生まれた
-    
-    新しい世界を構築に、ぜひお越しください -->
+    <section class="first-view">
+        <div id="P5Canvas"></div>
+        <div class="title-box">
+            <h1 class="title">Re：構築</h1>
+            <p class="sub-title">by 可ノウ星・HitaHita</p>
+        </div>
+    </section>
 
-    <!-- script -->
-    <script src="js/loading.js"></script>
+    <section class="container">
+        <div class="about" id="about">
+            <h2 class="class-title">Message</h2>
+            <p class="about-text basic-text">
+                私たちの世界は、私たちの触れたもの・見たもの・経験で作られていて<br>
+                常にその輪郭を変化させ続けている<br>
+                私たちの世界も、あなたの世界も、そのどこかで交わっている<br>
+                そう気がついたら、そこにまた新しい世界が生まれた<br>
+                新しい世界を構築に、ぜひお越しください
+            </p>
+        </div>
+
+        <div class="artist" id="artist">
+            <h2 class="class-title">Artist</h2>
+            <div class="artist-box">
+                <div class="artist-info">
+                    <img src="images/key-visual.png" alt="artist1" class="artist-img">
+                    <p class="basic-text artist-name">可ノウ星</p>
+                    <p class="basic-text artist-text">
+                        <!-- tttttttttttttttttttt<br>
+                        tttttttttttttttttttt<br>
+                        tttttttttttttttttttt -->
+                    </p>
+                    <a href="https://www.instagram.com/0322_no_iro/" class="sns basic-text">instagram</a>
+                </div>
+                <div class="artist-info">
+                    <img src="images/key-visual.png" alt="artist2" class="artist-img">
+                    <p class="basic-text artist-name">米田菜々穂</p>
+                    <p class="basic-text artist-text">
+                        <!-- tttttttttttttttttttt<br>
+                        tttttttttttttttttttt<br>
+                        tttttttttttttttttttt -->
+                    </p>
+                    <a href="https://www.instagram.com/gudakudari/" class="sns basic-text">instagram</a>
+                </div>
+                <div class="artist-info">
+                    <img src="images/key-visual.png" alt="artist2" class="artist-img">
+                    <p class="basic-text artist-name">きむらこうや</p>
+                    <p class="basic-text artist-text">
+                        <!-- tttttttttttttttttttt<br>
+                        tttttttttttttttttttt<br>
+                        tttttttttttttttttttt -->
+                    </p>
+                    <a href="https://www.instagram.com/kim___main/" class="sns basic-text">instagram</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="info" id="info">
+            <h2 class="class-title">Information</h2>
+            <p class="date-text basic-text">
+                2024/11/16 (土)  11:00-17:00<br>
+                2024/11/17 (日)  11:00-18:00
+            </p>
+            <p class="access-text basic-text">
+                @ kumagusuku<br>
+                〒604-8805 京都府京都市中京区壬生馬場町 37番地3
+            </p>
+            <div class="map-container">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d298.35028603600153!2d135.7455714884929!3d35.00645562981236!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6001062c3f0522ad%3A0xf7c151b234394f0c!2skumagusuku!5e0!3m2!1sja!2sjp!4v1731798011293!5m2!1sja!2sjp"
+                    style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                    class="access-map"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <section class="footer">
+        <p class="footer-text">©︎2024 可ノウ星・HitaHita</p>
+    </section>
+
+    <!-- ----- script ----- -->
+    <script src="js/sketch.js"></script>
 </body>
 </html>
